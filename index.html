@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
+    <title>Hypernet Demo</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--  Paper Dashboard core CSS    -->
+    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <!--  Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
+    <link href="assets/css/themify-icons.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper active" id="wrapper">
+    <div id="sidebar-wrapper" class="sidebar" data-background-color="black" data-active-color="warning">
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://hyper.kiathan.com" class="simple-text">
+                    Hyperlink
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li class="active">
+                    <a href="#">
+                        <i class="ti-panel"></i>
+                        <p>Hypernet Project</p>
+                    </a>
+                </li>
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <!--
+                    <button type="button" class="navbar-toggle" id="navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar bar1"></span>
+                        <span class="icon-bar bar2"></span>
+                        <span class="icon-bar bar3"></span>
+                    </button>
+                  -->
+                </div>
+                <a class="navbar-brand" href="#">Hypernet Project</a>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Network Map Demo</h4>
+				                            <hr>
+                            </div>
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 col-lg-8">
+                                         <div id="roundCounter" class="roundCounter"></div>
+                                        <div id="networkChart">
+                                            <svg></svg>
+                                        </div>
+                                    </div>
+                                     <div class="col-xs-12 col-sm-4 col-lg-4">
+                                        <div class="latest_post_container" id="latest_post_container">
+
+                                            <div class="roundCounter"><p>Transactions</p></div>
+                                          <ul class="latest_postnav">
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rpasYR6Lrw6iKxUmNR7sLmcSPmau39D1gJ</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>477.428006</b> HYPER @ <b>872.4</b> ETH/HYPER</div>
+                                            </li>
+																						<li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">raL7tMvfQUL9sHQMRdwWpEJFRo5bxtzeiE</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>1,491.1862</b> CNY @ <b>4.4903</b> HYPER/CNY</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rpasYR6Lrw6iKxUmNR7sLmcSPmau39D1gJ</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>477.428006</b> HYPER @ <b>872.4</b> ETH/HYPER</div>
+                                            </li>
+																						<li>
+                                              <span class="icon"></span>
+                                              <div class="typePayment ng-binding">Payment</div>
+                                              <div class="account ng-binding">rJ7Fha6GSZVMCXtowYNC5nwsBtL3deBkf4</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary"><b>1,900</b> HYPER sent to rPb7e5HUYMmpQ9hJCHo3SgdvEnW8ERENjb</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="typeCancel ng-binding">OfferCancel</div>
+                                              <div class="account ng-binding">rpasYR6Lrw6iKxUmNR7sLmcSPmau39D1gJ</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">Offer <b>13310812</b> cancelled</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rENDnFwR3CPvrsPjD9XXeqVoXeVt2CpPWX</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">sell <b>2,900</b> HYPER @ <b>0.57573</b> HYPER/EUR</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rEwE1L4sG5uaLnhDrpDPx4JLgncotAbr7M</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>50</b> HYPER @ <b>872.98</b> ETH/HYPER</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="typeCancel ng-binding">OfferCancel</div>
+                                              <div class="account ng-binding">rpasYR6Lrw6iKxUmNR7sLmcSPmau39D1gJ</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">Offer <b>12010813</b> cancelled</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rENDnFwR3CPvrsPjD9XXeqVoXeVt2CpPWX</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">sell <b>2,900</b> HYPER @ <b>0.57573</b> HYPER/EUR</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rEwE1L4sG5uaLnhDrpDPx4JLgncotAbr7M</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>50</b> HYPER @ <b>872.98</b> ETH/HYPER</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">raL7tMvfQUL9sHQMRdwWpEJFRo5bxtzeiE</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>1,491.1862</b> CNY @ <b>4.4903</b> HYPER/CNY</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rpasYR6Lrw6iKxUmNR7sLmcSPmau39D1gJ</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>477.428006</b> HYPER @ <b>872.4</b> ETH/HYPER</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="typeCancel ng-binding">OfferCancel</div>
+                                              <div class="account ng-binding">rpasYR6Lrw6iKxUmNR7sLmcSPmau39D1gJ</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">Offer <b>13012468</b> cancelled</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rENDnFwR3CPvrsPjD9XXeqVoXeVt2CpPWX</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">sell <b>2,900</b> HYPER @ <b>0.57573</b> HYPER/EUR</div>
+                                            </li>
+																						<li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rEwE1L4sG5uaLnhDrpDPx4JLgncotAbr7M</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>100</b> HYPER @ <b>1652.98</b> ETH/HYPER</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">raL7tMvfQUL9sHQMRteWpEJFRo5bxtzeiE</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>2,580.3254</b> CNY @ <b>8.2403</b> HYPER/CNY</div>
+                                            </li>
+                                            <li>
+                                              <span class="icon"></span>
+                                              <div class="type ng-binding">OfferCreate</div>
+                                              <div class="account ng-binding">rpasYR6Lrw6iKxUmNR7sLmcSPmau39D1gJ</div>
+                                              <div class="summary ng-binding" ng-bind-html="tx.summary">buy <b>233.218006</b> HYPER @ <b>432.4</b> ETH/HYPER</div>
+                                            </li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script> Hypernet Project
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<style>
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.nodes circle {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.latest_post_container {
+    display: inline;
+    /* float: right; */
+    height: inherit;
+    width: inherit;
+    position: relative;
+    /* width: calc(100vw/3.5); */
+}
+
+.latest_postnav{
+    height:auto;
+    margin-top:20px;
+    list-style-type: none;}
+.latest_postnav li{margin-bottom:10px; float:left; width:100%}
+
+.icon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    background-image: url(assets/img/offerin.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.type {
+    display: inline-block;
+    min-width: 60px;
+    padding: 2px 5px;
+    margin: 0 5px;
+    font-size: 8px;
+    color: #fff;
+    text-align: center;
+    background: #888;
+    border-radius: 2px;
+    background: #569;
+    opacity: .7;
+}
+
+.typeCancel {
+    display: inline-block;
+    min-width: 60px;
+    padding: 2px 5px;
+    margin: 0 5px;
+    font-size: 8px;
+    color: #fff;
+    text-align: center;
+    background: #955;
+    border-radius: 2px;
+    background: #955;
+    opacity: .7;
+}
+
+.typePayment {
+    display: inline-block;
+    min-width: 60px;
+    padding: 2px 5px;
+    margin: 0 5px;
+    font-size: 8px;
+    color: #fff;
+    text-align: center;
+    background: #474;
+    border-radius: 2px;
+    background: #474;
+    opacity: .7;
+}
+
+.roundCounter{
+  padding: 5px;
+}
+
+.account {
+    float: right;
+    padding: 3px 5px 0;
+    font-size: 11px;
+    color: #337ab7;
+}
+
+.summary {
+    margin: 0 2px;
+    clear: both;
+    font-size: 12px;
+}
+
+
+
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #E3DDD8;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #3173AD;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.6px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #E3DDD8;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #E3DDD8;
+  border-radius: 25px;
+  border: 0px solid #000101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #3173AD;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 12.8px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 39px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #E3DDD8;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #E3DDD8;
+  border: 0px solid #000101;
+  border-radius: 50px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #3173AD;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #E3DDD8;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #E3DDD8;
+}
+</style>
+
+</body>
+
+<!--   Core JS Files   -->
+<script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/js/jquery.newsTicker.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script>
+
+var width = window.innerWidth / 1.6;
+var height = window.innerHeight / 2;
+var svg = d3.select("svg").attr("width",width).attr("height",height);
+window.onresize = updateWindow;
+
+//var elem = document.getElementsByClassName("latest_post_container");
+//elem.style.width = (window.innerWidth / 3.5);
+
+function updateWindow(){
+    width = window.innerWidth / 1.6;
+    height = window.innerHeight / 2;
+    if (window.innerWidth <= 375){
+        width = window.innerWidth/1.2;
+//        elem.style.width = window.innerWidth;
+    }
+    svg.attr("width", width).attr("height", height);
+//    simulation.force("center", d3.forceCenter(width / 2, height / 2));
+}
+// Call zoom for svg container.
+svg.call(d3.zoom().on('zoom', zoomed));
+
+var color = d3.scaleOrdinal(d3.schemeCategory20);
+
+var simulation = d3.forceSimulation()
+    .force("link", d3.forceLink())//Or to use names rather than indices: .id(function(d) { return d.id; }))
+    .force("charge", d3.forceManyBody().strength([-120]).distanceMax([500]))
+    .force("center", d3.forceCenter(width / 2, height / 2));
+
+var container = svg.append('g');
+
+// Toggle for ego networks on click (below).
+var toggle = 0;
+var nodeCount = 4;
+var ticker = 0;
+var slower = 0;
+var gNode;
+var previousValidatorCount = 0;
+var validatorCount = 0;
+var randomRoundCounter = Math.floor((Math.random() * 100000) + 1000000);
+
+var transactionTicker =  $('.latest_postnav').newsTicker({
+        row_height: 56,
+        max_rows: 9,
+        speed: 10,
+        duration: 400
+    });
+
+d3.json("marvel.json", function(error, graph) {
+  if (error) throw error;
+
+  // Make object of all neighboring nodes.
+  var linkedByIndex = {};
+  graph.links.forEach(function(d) {
+	  linkedByIndex[d.source + ',' + d.target] = 1;
+	  linkedByIndex[d.target + ',' + d.source] = 1;
+  });
+
+  // A function to test if two nodes are neighboring.
+  function neighboring(a, b) {
+	  return linkedByIndex[a.index + ',' + b.index];
+  }
+
+  // Linear scale for degree centrality.
+  var degreeSize = d3.scaleLinear()
+  	.domain([d3.min(graph.nodes, function(d) {return d.degree; }),d3.max(graph.nodes, function(d) {return d.degree; })])
+  	.range([8,25]);
+
+  var link = container.append("g")
+      .attr("class", "links")
+    .selectAll("line")
+    .data(graph.links, function(d) { return d.source + ", " + d.target;})
+    .enter().append("line")
+      .attr('class', 'link');
+
+  var node = container.append("g")
+      .attr("class", "nodes")
+    .selectAll("circle")
+    .data(graph.nodes)
+    .enter().append("circle")
+    .attr("r", 10)
+    .attr("fill", "#ff2727")
+    .attr('class', 'node')
+      .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
+
+
+
+  node.append("title")
+      .text(function(d) { return d.name; });
+
+  simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
+  simulation.force("link")
+      .links(graph.links);
+
+  function ticked() {
+    ticker++;
+  	var slow = 1;
+  	if(nodeCount<50){
+  		slow = 3;
+  	}
+  	else if(nodeCount<100){
+  		slow = 10;
+  	}
+  	else{
+  		slow = 30;
+  	}
+  	if(ticker%slow != 0){
+  		return;
+  	}
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; });
+  }
+
+
+
+  var roundCountertext = d3.select('#roundCounter').append('p').attr("id", "roundTextCountMain").text("  Round " + randomRoundCounter);
+	var masterSlider = d3.select('#networkChart').append('p').text('Total MasterNodes: ');
+  var validatorSlider = d3.select('#networkChart').append('p').text('Total Validator(s): ');
+	var numTransSlider = d3.select('.latest_post_container').append('p').text('Transactions: ');
+
+	masterSlider.append('masterlabel')
+		.attr('for', 'threshold')
+		.text('4');
+  validatorSlider.append('validatorlabel')
+		.attr('for', 'threshold2')
+		.text('0');
+	numTransSlider.append('numTranslabel')
+		.attr('for', 'threshold3')
+		.text('100');
+
+	masterSlider.append('input')
+		.attr('type', 'range')
+		.attr('min', 4)
+		.attr('max', 10000)
+		.attr('value', 4)
+		.attr('id', 'threshold')
+//		.style('width', '50%')
+		.style('display', 'block')
+		.on('input', function () {
+
+      console.log("PreviousValidatorCount" + previousValidatorCount);
+      //remove all validators
+      graph.nodes.splice(nodeCount, graph.nodes.length-nodeCount);
+      var numOfEdges = nodeCount * (nodeCount - 1) / 2;
+      graph.links.splice(numOfEdges, previousValidatorCount);
+
+			d3.select('masterlabel').text(this.value);
+			var scaledValue =Math.trunc(this.value / 5);
+			if(this.value < 50){
+				nodeCount = Math.trunc(this.value);
+			}else{
+				if(scaledValue>100){
+					nodeCount = 90 +Math.trunc(1.5 * Math.sqrt(scaledValue));
+				}else{
+					nodeCount = 40 + scaledValue;
+				}
+			}
+
+			threshold = nodeCount;
+      var newNodeId = graph.nodes.length;
+			// Find the links that are at or above the threshold.
+//			var newData = [];
+//
+//			graph.links.forEach( function (d) {
+//				if (d.weight >= threshold) {newData.push(d); };
+//			});
+                        if(threshold > newNodeId){
+                            // if there are currently n links (before we add a new one, below) then
+                            // the new link will have an id of n (first link has an id of 0)
+                            for(var i=newNodeId; i<threshold; i++){
+
+                                graph.nodes.push({
+                                    "id": i,
+                                    "name": i,
+                                    "group": 1
+                                });
+
+                                graph.links.forEach(function(d,y){
+                                    var linkId = graph.links.length;
+                                    if(y < i){
+                                        graph.links.push({
+                                            "source": i, "target": y, "value": 1, "id": linkId
+                                        });
+                                    }
+                                });
+                            }
+                        }else if(threshold < newNodeId){
+                            graph.nodes.splice(threshold, (newNodeId-threshold)+1 );
+
+                            var numOfEdges = threshold * (threshold - 1) / 2;
+                            var linkId = graph.links.length;
+                            graph.links.splice(numOfEdges, linkId);
+                        }
+			// Data join with only those new links.
+			link = link.data(graph.links, function(d){ return d.id});
+			link.exit().remove();
+			var linkEnter = link.enter().append('line').attr('class', 'link');
+			link = linkEnter.merge(link);
+
+			node = node.data(graph.nodes);
+                        node.exit().remove();
+			var nodeEnter = node.enter().append('circle')
+                        .attr("r", 10)
+                        .attr("fill", "#ff2727")
+                        .attr('class', 'node')
+                        .call(d3.drag()
+                            .on("start", dragstarted)
+                            .on("drag", dragged)
+                            .on("end", dragended));
+			node = nodeEnter.merge(node);
+
+			// Restart simulation with new link data.
+			simulation
+				.nodes(graph.nodes).on('tick', ticked)
+				.force("link").links(graph.links);
+
+			simulation.alphaTarget(0.1).restart();
+
+      validatorPropagate();
+
+		});
+  validatorSlider.append('input')
+		.attr('type', 'range')
+		.attr('min', 0)
+		.attr('max', 100000)
+		.attr('value', 0)
+		.attr('id', 'threshold2')
+//		.style('width', '50%')
+		.style('display', 'block')
+		.on('input', function(){
+			d3.select('validatorlabel').text(this.value);
+			var scaledValValue = Math.trunc(this.value/2);
+			if(this.value<100){
+				validatorCount = Math.trunc(this.value);
+			}else{
+				if(scaledValValue>1500){
+					validatorCount = 1472 + Math.trunc(1.5 * Math.sqrt(scaledValValue));
+				}else{
+	      validatorCount = 70 + scaledValValue;
+				}
+			}
+      validatorPropagate();
+    });
+
+    function validatorPropagate() {
+      console.log("PreviousValidatorCount" + previousValidatorCount);
+      //remove all validators
+      graph.nodes.splice(nodeCount, graph.nodes.length-nodeCount);
+      var numOfEdges = nodeCount * (nodeCount - 1) / 2;
+      graph.links.splice(numOfEdges, previousValidatorCount);
+
+
+			var threshold = validatorCount;
+      previousValidatorCount = threshold;
+
+                        var numofNodes  = graph.nodes.length;
+                        var newNodeId = graph.nodes.length;
+                        var newNodeId2 = graph.nodes.length;
+                        if(threshold > 0){
+                            // if there are currently n links (before we add a new one, below) then
+                            // the new link will have an id of n (first link has an id of 0)
+
+                                for(var j=0; j<threshold; j++){
+																	var i = j%numofNodes;
+                                    graph.nodes.push({
+                                        "id": newNodeId,
+                                        "name": newNodeId,
+                                        "group": "validator"
+                                    });
+                                    var linkId = graph.links.length;
+                                    graph.links.push({
+                                        "source": newNodeId, "target": i, "group": "validator",  "value": 1, "id": linkId
+                                    });
+                                    newNodeId++;
+                                }
+
+                        }
+
+			// Data join with only those new links.
+			link = link.data(graph.links, function(d){ return d.id});
+			link.exit().remove();
+			var linkEnter = link.enter().append('line').attr('class', 'link');
+			link = linkEnter.merge(link);
+
+			node = node.data(graph.nodes);
+                        node.exit().remove();
+			var nodeEnter = node.enter().append('circle')
+                        .attr("r", 10)
+                        .attr("fill", "#8989ff")
+                        .attr('class', 'node')
+                        .call(d3.drag()
+                            .on("start", dragstarted)
+                            .on("drag", dragged)
+                            .on("end", dragended));
+			node = nodeEnter.merge(node);
+
+			// Restart simulation with new link data.
+			simulation
+				.nodes(graph.nodes).on('tick', ticked)
+				.force("link").links(graph.links);
+
+			simulation.alphaTarget(0.1).restart();
+
+
+		};
+
+		numTransSlider.append('input')
+			.attr('type', 'range')
+			.attr('min', 100)
+			.attr('max', 10000000)
+			.attr('value', 100)
+			.attr('id', 'threshold2')
+			.style('display', 'block')
+			.on('input', function(){
+				d3.select('numTranslabel').text(this.value);
+        var speed = 400 - Math.ceil(Math.sqrt(this.value)/4);
+        if (speed<10){
+          speed = 10;
+        }
+        transactionTicker.newsTicker('updateOption','duration', speed);
+	    });
+
+    var roundstart = function(){
+      //Update Round Count
+      randomRoundCounter++;
+			document.getElementById('roundTextCountMain').textContent = "  Round " + randomRoundCounter;
+      //change all nodes back to red
+
+      node = node.data(graph.nodes);
+
+      //change portions of node to green
+      if(nodeCount < 40){
+        slower =  1000
+      }
+
+      node.each(
+        function(d){
+          if(d.group === "validator"){
+            return;
+          }
+          d3.select(this).attr("fill", "#ff2727");
+          var timeout = 2650 - slower - Math.floor((Math.random() * d.id) + 1) * (2500/(d.id+1));
+          if(timeout<2590){
+            d3.select(this).transition().delay(timeout).duration(400).attr("fill", "#00cc00");
+          }
+        }
+      )
+
+
+    };
+    d3.interval(roundstart,3000);
+
+});
+
+function dragstarted(d) {
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+// Zooming function translates the size of the svg container.
+function zoomed() {
+	  container.attr("transform", "translate(" + d3.event.transform.x + ", " + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
+}
+
+//    $("#navbar-toggle").click(function(e) {
+//        e.preventDefault();
+//        $("#wrapper").toggleClass("active");
+//    });
+
+</script>
+
+</html>

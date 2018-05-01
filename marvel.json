@@ -1,0 +1,47 @@
+{
+    "directed":false,
+    "graph":{},
+    "multigraph":false,
+    "nodes": [
+        {
+            "id":0,
+            "name": 0,
+            "group": "master"
+        },
+        {
+            "id":1,
+            "name": 1,
+            "group": "master"
+        },
+        {
+            "id":2,
+            "name": 2,
+            "group": "master"
+        },
+        {
+            "id":3,
+            "name": 3,
+            "group": "master"
+        }
+    ],
+    "links": [
+        {
+            "source": 0, "target": 1, "value":1, "id":0, "group": "master"
+        },
+        {
+            "source": 0, "target": 2, "value":1, "id":1, "group": "master"
+        },
+        {
+            "source": 0, "target": 3, "value":1, "id":2, "group": "master"
+        },
+        {
+            "source": 1, "target": 2, "value":1, "id":3, "group": "master"
+        },
+        {
+            "source": 1, "target": 3, "value":1, "id":4, "group": "master"
+        },
+        {
+            "source": 2, "target": 3, "value":1, "id":5, "group": "master"
+        }
+    ]
+}
