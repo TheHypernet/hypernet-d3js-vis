@@ -44,17 +44,9 @@
     <div class="main-panel">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
-                <div class="navbar-header">
-                  <!--
-                    <button type="button" class="navbar-toggle" id="navbar-toggle">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar bar1"></span>
-                        <span class="icon-bar bar2"></span>
-                        <span class="icon-bar bar3"></span>
-                    </button>
-                  -->
-                </div>
-                <a class="navbar-brand" href="#">Hypernet Project</a>
+                <div class="navbar-header"></div>
+                <a class="navbar-brand" href="https://www.hyperlink.org"> <img src="hypernet-32.png" height="25" width="25"></a>
+                <a class="navbar-brand" href="https://www.hyperlink.org"> Hypernet Project</a>
             </div>
         </nav>
 
@@ -62,9 +54,27 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
+                      <h4 style="margin: 13px 0 7px">Introduction</h4>
+                      <p>
+                        This visualisation demonstrates the proposed Hypernet network consensus process that describes the decentralised foundational infrastructure and scalability potential.
+                        <br/>Please use the bottom sliders to adjust the size, participants and transactions of the network visualisation. Scroll to zoom in/out, drag with mouse to move around.
+                      </p>
+                    </div>
+                  </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                          <b>Consensus Agreement</b><br/>
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Ski_trail_rating_symbol_red_circle.png" height="15" width="15"> Masternode not in consensus | 
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Ski_trail_rating_symbol-green_circle.svg" height="16" width="16"> Masternode in consensus | 
+                          <img src="http://www.emoji.co.uk/files/google-emojis/symbols-android/8172-large-blue-circle.png" height="15" width="15"> Network Validator ( PC/Smart Phone )
+                        </p>
+                      </div>
+                      
+                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Network Map Demo</h4>
+                                <h4 class="title">Network Map</h4>
 				                            <hr>
                             </div>
                             <div class="content">
@@ -191,18 +201,28 @@
                     </div>
                 </div>
             </div>
+            <p>Full source code of this visualisation is provided under the MIT license on <a href="https://github.com/TheHypernet/hypernet-d3js-vis">GitHub</a></p>
+            <h6>Disclaimer</h6>
+            <p class="disclaimer">
+                This visualisation is intended to provide an informative visual anecdote to a decentralised network coming into a consensus through Federated Byzantium Consensus (FBA) but doesn't guarantee any claim to the accuracy or conclusions demonstrated.  Hyperlink Technologies Ltd. does not make and expressly disclaims all representations and warranties, express, implied, statutory or otherwise, whatsoever, including, but not limited to: (i) warranties of merchantability, fitness for a particular purpose, suitability, usage, title or noninfringement; (ii) that the contents of this visualisation are free from error; and (iii) that materials within will not infringe third-party rights. Hyperlink Technologies Ltd. and its affiliates shall have no liability for damages of any kind arising out of the use, reference to, or reliance on this visualisation or any of the content contained herein, even if advised of the possibility of such damages. In no event will Hyperlink Technologies Ltd. or its affiliates be liable to any person or entity for any damages, losses, liabilities, costs or expenses of any kind, whether direct or indirect, consequential, compensatory, incidental, actual, exemplary, punitive or special for the use of, reference to, or reliance on this visualisation or any of the content contained herein, including, without limitation, any loss of business, revenues, profits, data, use, goodwill or other intangible losses.
+            </p>
+
         </div>
 
         <footer class="footer">
             <div class="container-fluid">
                 <div class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> Hypernet Project
+                    &copy; <script>document.write(new Date().getFullYear())</script> Hyperlink Technologies Ltd.
                 </div>
             </div>
         </footer>
     </div>
 </div>
 <style>
+
+.disclaimer {
+  font-size: 9pt;
+}
 
 .links line {
   stroke: #999;
@@ -486,8 +506,6 @@ d3.json("marvel.json", function(error, graph) {
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
-
-
 
   node.append("title")
       .text(function(d) { return d.name; });
@@ -787,11 +805,6 @@ function dragended(d) {
 function zoomed() {
 	  container.attr("transform", "translate(" + d3.event.transform.x + ", " + d3.event.transform.y + ") scale(" + d3.event.transform.k + ")");
 }
-
-//    $("#navbar-toggle").click(function(e) {
-//        e.preventDefault();
-//        $("#wrapper").toggleClass("active");
-//    });
 
 </script>
 
